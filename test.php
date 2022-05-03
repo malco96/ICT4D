@@ -1,6 +1,14 @@
 <?php
 # $ php -f test.php
 
+
+//get data passed from Voice Browser
+$user = $_GET['farmerid'];
+$product = $_GET['name'];
+$quantity = $_GET['adress'];
+$price = $_GET['phonenr'];
+$duration = $_GET['unionid'];
+
 $dbname = 'heroku_8f7ce219fb9f347';
 $dbuser = 'b342abd3b38c6a';
 $dbpass = 'cbea95c2';
