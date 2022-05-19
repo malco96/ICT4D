@@ -1,0 +1,32 @@
+<?xml version="1.0"?> 
+<vxml version = "2.1" application="http://webhosting.voxeo.net/208163/www/root.vxml">
+
+
+<!-- Main form for data input-->
+<form id="details">
+
+<!-- farmerID field-->
+<field name="form_farmerID" type="number">
+<prompt><audio src="http://webhosting.voxeo.net/208163/www/recs/please_enter_farmer_id_en.wav" maxage="0"/></prompt>
+
+<!--"filled" farmerID field -->
+<filled>
+
+<!--save entered value in variable-->
+ 	<assign name="farmer_id" expr="form_farmerID"/>
+	<goto next="#save"/>
+      </filled>
+   </field>
+</form>
+
+<form id="save">
+<block>
+<data name="phpsave" src="https://curatorial-workshee.000webhostapp.com/authentication.php" namelist="farmer_id" method="get"/>
+<!--  call php file and submit data -->
+</block>
+</form>
+
+
+</vxml>
+
+

@@ -1,0 +1,28 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<vxml version="2.1" xml:lang="fr-fr">
+
+<menu id="menu1" dtmf="true">
+		<prompt>Sélectionnez 1 pour confirmer ou modifier le retrait de la certification.</prompt>
+		<prompt>Sélectionnez 2 pour obtenir des informations sur le syndicat.</prompt>
+		<prompt>Sélectionnez 3 pour les détails de la certification.</prompt>
+		   <choice next="http://webhosting.voxeo.net/208163/www/pickupMenuFR.xml"/>
+		   <choice next="#form1"/>
+		   <choice next="#form2"/>
+</menu>
+  
+<form id="form1">
+	<prompt> Vous avez sélectionné 2 pour les informations syndicales.</prompt>
+
+	<block>
+		<goto next="https://curatorial-workshee.000webhostapp.com/union_infoFR.php"/>
+	</block>
+</form>
+ 
+<form id="form2">
+	<prompt> Vous avez sélectionné 3 pour les informations de certification.</prompt>
+
+	<block>
+		<goto next="https://curatorial-workshee.000webhostapp.com/certification_detailsFR.php"/>
+	</block>
+</form>	 
+</vxml>

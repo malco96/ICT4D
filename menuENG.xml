@@ -1,0 +1,29 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<vxml version = "2.1" >  
+
+<menu id="menu1" dtmf="true">
+		<prompt>Select 1 to Confirm or Change Certification Pickup.</prompt>
+		<prompt>Select 2 to Get Union Information.</prompt>
+		<prompt>Select 3 to Certification details.</prompt>
+		   <choice next="http://webhosting.voxeo.net/208163/www/pickupMenu.xml"/>
+		   <choice next="#form1"/>
+		   <choice next="#form2"/>
+</menu>
+  
+<form id="form1">
+	<prompt> You selected 2 for Union Information.</prompt>
+
+	<block>
+		<goto next="https://curatorial-workshee.000webhostapp.com/union_info.php"/>
+	</block>
+</form>
+ 
+<form id="form2">
+	<prompt> You selected 3 for Certification Information.</prompt>
+
+	<block>
+		<goto next="https://curatorial-workshee.000webhostapp.com/certification_details.php"/>
+	</block>
+</form>
+	 
+</vxml>

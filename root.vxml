@@ -1,0 +1,8 @@
+<?xml version="1.0"?>
+<vxml version="2.0">
+
+<!-- variables (shared between files in the system)-->
+
+<var name="farmer_id"/>
+
+</vxml>

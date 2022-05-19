@@ -1,0 +1,52 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<vxml version="2.1" xml:lang="fr-fr">
+
+  <menu id="menu2" dtmf="true">
+		<prompt>Vous avez choisi de confirmer ou de modifier le retrait de la certification.</prompt>
+		<prompt>Sélectionnez 1 pour confirmer le rendez-vous de ramassage actuel.</prompt>
+		<prompt>Sélectionnez 2 pour modifier la date du rendez-vous.</prompt>
+			<choice next="#details"/>
+			<choice next="#form2"/>
+  </menu>
+  
+<!-- Main form for data input-->
+<form id="details">
+<prompt>Vous avez sélectionné l'option 1 : Votre rendez-vous de prise en charge est confirmé.</prompt>
+<!-- farmerID field-->
+
+      <field name="form_farmerID" type="number">
+	<prompt>
+		<audio src="http://webhosting.voxeo.net/208163/www/recs/please_enter_farmer_id_fr.wav" maxage="0"/>
+	</prompt>
+
+<!--"filled" farmerID field -->
+   	<filled>
+
+<!--save entered value in variable-->
+
+ 	<assign name="farmer_id" expr="form_farmerID"/>
+	<goto next="#save"/> <!-- go to "Save" form-->
+      </filled>
+   </field>
+</form>
+
+
+<form id="save">
+     	<block>
+	<prompt>Vous avez confirmé avec succès la date de retrait de votre certification</prompt>
+     	</block>
+
+	<block>
+	<data name="phpsave" src="https://curatorial-workshee.000webhostapp.com/confirm_test.php" namelist="farmer_id" method="get"/> <!-- call php file and submit data-->
+	</block>
+</form>
+ 
+ <form id="form2">
+  <block>
+<prompt>Vous avez sélectionné l'option 2 : vous pouvez appeler le numéro de téléphone suivant pour modifier la date du rendez-vous. </prompt>
+   <prompt>234-4564-23</prompt>
+  </block>
+ </form>
+	  
+</vxml>
+

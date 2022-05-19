@@ -1,0 +1,50 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<vxml version = "2.1" >  
+
+  <menu id="menu2" dtmf="true">
+			<prompt>You chose to Confirm or Change Certification Pickup.</prompt>
+			<prompt>Select 1 to Confirm Current Pick-Up Appointment.</prompt>
+			<prompt>Select 2 to Change appointment date.</prompt>
+			<choice next="#details"/>
+			<choice next="#form2"/>
+  </menu>
+  
+<!-- Main form for data input-->
+<form id="details">
+   <prompt>You selected option 1: Your pick-up appointment is confirmed.</prompt>
+<!-- farmerID field-->
+
+      <field name="form_farmerID" type="number">
+ 		<prompt>Please enter you farmer id</prompt>
+
+<!--"filled" farmerID field -->
+   	<filled>
+
+<!--save entered value in variable-->
+
+ 	<assign name="farmer_id" expr="form_farmerID"/>
+	<goto next="#save"/> <!-- go to "Save" form-->
+      </filled>
+   </field>
+</form>
+
+
+<form id="save">
+     	<block>
+  	<prompt>You have successfully confirmed your certification pick-up date</prompt>
+     	</block>
+
+	<block>
+	<data name="phpsave" src="https://curatorial-workshee.000webhostapp.com/confirm_test.php" namelist="farmer_id" method="get"/> <!-- call php file and submit data-->
+	</block>
+</form>
+ 
+ <form id="form2">
+  <block>
+   <prompt>You selected option 2: You can call the following phone number to change appointment date. </prompt>
+   <prompt>234-4564-23</prompt>
+  </block>
+ </form>
+	  
+</vxml>
+

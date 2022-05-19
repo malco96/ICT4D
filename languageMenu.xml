@@ -1,0 +1,32 @@
+<?xml version="1.0"?>
+<vxml version = "2.1" >
+
+<menu id="menu1" dtmf="true">
+
+<prompt><audio src="http://webhosting.voxeo.net/208163/www/recs/welcome_en.wav" maxage="0"/></prompt>	
+<prompt><audio src="http://webhosting.voxeo.net/208163/www/recs/welcome_to_certifiseeds_fr.wav" maxage="0"/></prompt>
+
+	<prompt>Select 1 for English.</prompt>
+	<prompt xml:lang="fr-fr">Sélectionnez 2 pour le français</prompt>
+
+	<choice next="#form1"/>
+	<choice next="#form2"/>
+</menu>
+
+<form id="form1">
+<block>
+<prompt>You selected 1 for English.</prompt>		
+<goto next="http://webhosting.voxeo.net/208163/www/menuENG.xml"/>
+</block>
+</form>
+
+<form id="form2">
+<block>
+<prompt xml:lang="fr-fr">Vous sélectionnez 2 pour le Français.</prompt>	
+<goto next="http://webhosting.voxeo.net/208163/www/menuFR.xml"/>
+</block>
+</form>
+
+	
+
+</vxml>
