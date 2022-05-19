@@ -2,21 +2,22 @@
 <vxml version = "2.1" >  
 
   <menu id="menu2" dtmf="true">
-			<prompt>You chose to Confirm or Change Certification Pickup.</prompt>
-			<prompt>Select 1 to Confirm Current Pick-Up Appointment.</prompt>
-			<prompt>Select 2 to Change appointment date.</prompt>
+	<prompt><audio src="http://webhosting.voxeo.net/208163/www/recs/you_chose_cccp.wav"/></prompt>
+	<prompt><audio src="http://webhosting.voxeo.net/208163/www/recs/select_1_confirm_appoint.wav"/></prompt>
+	<prompt><audio src="http://webhosting.voxeo.net/208163/www/recs/select_2_to_change_appoint.wav"/></prompt>
 			<choice next="#details"/>
 			<choice next="#form2"/>
   </menu>
   
 <!-- Main form for data input-->
 <form id="details">
-   <prompt>You selected option 1: Your pick-up appointment is confirmed.</prompt>
+<block>
+<prompt><audio src="http://webhosting.voxeo.net/208163/www/recs/you_select_1_to_confirm_your_appoint.wav"/></prompt>
+</block>
 <!-- farmerID field-->
 
-      <field name="form_farmerID" type="number">
- 		<prompt>Please enter you farmer id</prompt>
-
+      <field name="form_farmerID" type="number">     
+		<prompt><audio src="http://webhosting.voxeo.net/208163/www/recs/please_enter_farmer_id_en.wav" maxage="0"/></prompt>
 <!--"filled" farmerID field -->
    	<filled>
 
@@ -30,9 +31,6 @@
 
 
 <form id="save">
-     	<block>
-  	<prompt>You have successfully confirmed your certification pick-up date</prompt>
-     	</block>
 
 	<block>
 	<data name="phpsave" src="https://curatorial-workshee.000webhostapp.com/confirm_test.php" namelist="farmer_id" method="get"/> <!-- call php file and submit data-->
@@ -41,7 +39,7 @@
  
  <form id="form2">
   <block>
-   <prompt>You selected option 2: You can call the following phone number to change appointment date. </prompt>
+	<prompt><audio src="http://webhosting.voxeo.net/208163/www/recs/you_can_call_nr.wav"/></prompt>
    <prompt>234-4564-23</prompt>
   </block>
  </form>
