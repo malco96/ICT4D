@@ -2,16 +2,19 @@
 <vxml version="2.1" xml:lang="fr-fr">
 
   <menu id="menu2" dtmf="true">
-		<prompt>Vous avez choisi de confirmer ou de modifier le retrait de la certification.</prompt>
-		<prompt>Sélectionnez 1 pour confirmer le rendez-vous de ramassage actuel.</prompt>
-		<prompt>Sélectionnez 2 pour modifier la date du rendez-vous.</prompt>
+		<prompt><audio src="http://webhosting.voxeo.net/208163/www/recs/vous_avez_confirmer_fr.wav"/></prompt>
+		<prompt><audio src="http://webhosting.voxeo.net/208163/www/recs/select_1_pour_confirmer_actuel_fr.wav"/></prompt>
+		<prompt><audio src="http://webhosting.voxeo.net/208163/www/recs/select_2_pour_modifier_la_date_fr.wav"/></prompt>
 			<choice next="#details"/>
 			<choice next="#form2"/>
   </menu>
   
 <!-- Main form for data input-->
 <form id="details">
-<prompt>Vous avez sélectionné l'option 1 : Votre rendez-vous de prise en charge est confirmé.</prompt>
+	<block>
+		<prompt><audio src="http://webhosting.voxeo.net/208163/www/recs/vous_select_1_confirme_fr.wav"/></prompt>
+	</block>
+
 <!-- farmerID field-->
 
       <field name="form_farmerID" type="number">
@@ -33,7 +36,7 @@
 
 <form id="save">
      	<block>
-	<prompt>Vous avez confirmé avec succès la date de retrait de votre certification</prompt>
+	<prompt><audio src="http://webhosting.voxeo.net/208163/www/recs/vous_avez_confirme_appoint_fr.wav"/></prompt>
      	</block>
 
 	<block>
@@ -43,7 +46,7 @@
  
  <form id="form2">
   <block>
-<prompt>Vous avez sélectionné l'option 2 : vous pouvez appeler le numéro de téléphone suivant pour modifier la date du rendez-vous. </prompt>
+	<prompt><audio src="http://webhosting.voxeo.net/208163/www/recs/vous_select_2_nr_fr.wav"/></prompt>
    <prompt>234-4564-23</prompt>
   </block>
  </form>
