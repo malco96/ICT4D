@@ -2,27 +2,31 @@
 <vxml version = "2.1" >  
 
 <menu id="menu1" dtmf="true">
-		<prompt>Select 1 to Confirm or Change Certification Pickup.</prompt>
-		<prompt>Select 2 to Get Union Information.</prompt>
-		<prompt>Select 3 to Certification details.</prompt>
+<prompt><audio src="http://webhosting.voxeo.net/208163/www/recs/select_1_for_cccp.wav"/></prompt>
+<prompt><audio src="http://webhosting.voxeo.net/208163/www/recs/select_2_for_union_info.wav"/></prompt>
+<prompt><audio src="http://webhosting.voxeo.net/208163/www/recs/select_3_certdetails.wav"/></prompt>
 		   <choice next="http://webhosting.voxeo.net/208163/www/pickupMenu.xml"/>
 		   <choice next="#form1"/>
 		   <choice next="#form2"/>
 </menu>
   
 <form id="form1">
-	<prompt> You selected 2 for Union Information.</prompt>
+	<block>
+	<prompt><audio src="http://webhosting.voxeo.net/208163/www/recs/you_selected_2_for_unioninfo.wav"/></prompt>
+	</block>
 
 	<block>
-		<goto next="https://curatorial-workshee.000webhostapp.com/union_info.php"/>
+	<goto next="https://curatorial-workshee.000webhostapp.com/union_info.php"/>
 	</block>
 </form>
  
 <form id="form2">
-	<prompt> You selected 3 for Certification Information.</prompt>
+	<block>
+	<prompt><audio src="http://webhosting.voxeo.net/208163/www/recs/you_selected_3_for_certinfo.wav"/></prompt>
+	</block>
 
 	<block>
-		<goto next="https://curatorial-workshee.000webhostapp.com/certification_details.php"/>
+	<goto next="https://curatorial-workshee.000webhostapp.com/certification_details.php"/>
 	</block>
 </form>
 	 
