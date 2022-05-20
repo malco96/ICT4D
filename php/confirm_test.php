@@ -1,5 +1,4 @@
 <?php
-# $ php -f test.php
 
 $dbname = 'heroku_8f7ce219fb9f347';
 $dbuser = 'b342abd3b38c6a';
