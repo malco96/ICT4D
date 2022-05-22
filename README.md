@@ -1,3 +1,8 @@
+<p align="center">
+  <img src="LogoCertifiseedsTransparant.png" width="350" title="certifiseedslogo">
+</p>
+
+
 # ICT4D
 This repository contains a voice-accessible service for cereal seed certification prototype project.
 
